@@ -4,7 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bgColor">#222222</color>
     <color name="accentColor">#f4ae95</color>
-    <color name="actionBarBg">#111111</color>
+    <color name="actionBarBg">#333333</color>
     <color name="fontColor">#d6d4d4</color>
 
 </resources>

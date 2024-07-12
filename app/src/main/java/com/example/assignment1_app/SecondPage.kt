@@ -1,46 +1,37 @@
 package com.example.assignment1_app
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.assignment1_app.data.User
 
-class SecondPage : AppCompatActivity() {
-    private lateinit var etName: EditText
-    private lateinit var etAge: EditText
-    private lateinit var etJob: EditText
-    private lateinit var etSex: EditText
-    private lateinit var etPhone: EditText
-    private lateinit var etEmail: EditText
+class SecondActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_page)
 
-        etName = findViewById(R.id.etName)
-        etAge = findViewById(R.id.etAge)
-        etSex = findViewById(R.id.etSex)
-        etPhone = findViewById(R.id.etPhone)
-        etEmail = findViewById(R.id.etEmail)
+        findViewById<Button>(R.id.btnSubmit).setOnClickListener {
 
-        val submitButton: Button = findViewById(R.id.btnSubmit)
-        submitButton.setOnClickListener {
+            val etName = findViewById<EditText>(R.id.etName)
+            val etAge = findViewById<EditText>(R.id.etAge)
+            val etSex = findViewById<EditText>(R.id.etSex)
+            val etPhone = findViewById<EditText>(R.id.etPhone)
+            val etEmail = findViewById<EditText>(R.id.etEmail)
+
             val name = etName.text.toString()
-            val age = etAge.text.toString()
-            val job = etJob.text.toString()
+            val age = etAge.text.toString().toIntOrNull() ?: 0
             val sex = etSex.text.toString()
             val phone = etPhone.text.toString()
             val email = etEmail.text.toString()
 
-            val intent = Intent()
-            intent.putExtra("userName", name)
-            intent.putExtra("userAge", age)
-            intent.putExtra("userJob", job)
-            intent.putExtra("userSex", sex)
-            intent.putExtra("userPhone", phone)
-            intent.putExtra("userEmail", email)
+            val user = User(name, age, sex, phone, email)
 
-            setResult(RESULT_OK, intent)
+            val resultIntent = Intent()
+            resultIntent.putExtra("user", user)
+            setResult(Activity.RESULT_OK, resultIntent)
             finish()
         }
     }
