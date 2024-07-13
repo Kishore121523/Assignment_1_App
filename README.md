@@ -1,7 +1,7 @@
 
 # Assignment 1 - "Add Users" App
 
-A simple android application developed using Kotlin to add user details and display it in a minimal UI.
+A simple android application developed using Kotlin to add user details and display it in a minimal and a consistent UI.
 
 ## UI Components used:
  - TextView
