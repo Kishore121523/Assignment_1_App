@@ -10,6 +10,7 @@ A simple android application developed using Kotlin to add user details and disp
  - EditText
  - Button - (setOnClickListener)
  - LinearLayout
+ - ScrollView
 
 ## How the app works:
 - When the spinner is kept to "Enabled", the "Add User" button will be enabled and the user can click it (setOnClickListener is fired).
