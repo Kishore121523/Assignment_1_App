@@ -19,17 +19,11 @@ class SecondActivity : AppCompatActivity() {
     }
 
     private fun callActivity() {
-        val etName = findViewById<EditText>(R.id.etName)
-        val etAge = findViewById<EditText>(R.id.etAge)
-        val etSex = findViewById<EditText>(R.id.etSex)
-        val etPhone = findViewById<EditText>(R.id.etPhone)
-        val etEmail = findViewById<EditText>(R.id.etEmail)
-
-        val name = etName.text.toString()
-        val age = etAge.text.toString()
-        val sex = etSex.text.toString()
-        val phone = etPhone.text.toString()
-        val email = etEmail.text.toString()
+        val name = findViewById<EditText>(R.id.etName).text.toString()
+        val age = findViewById<EditText>(R.id.etAge).text.toString()
+        val sex = findViewById<EditText>(R.id.etSex).text.toString()
+        val phone = findViewById<EditText>(R.id.etPhone).text.toString()
+        val email = findViewById<EditText>(R.id.etEmail).text.toString()
 
         val resultIntent = Intent().apply {
             putExtra("Passed_Name", name)
