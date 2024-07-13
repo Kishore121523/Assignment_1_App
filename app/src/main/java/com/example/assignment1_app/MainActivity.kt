@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
 
     // registerForActivityResult is used to launch the second activity and get result from it back.
     // Normal startActivity function will only launch the next activity but not wait for result
-    private val startSecondActivityAndWaitForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+    private val startSecondActivityAndWaitForResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             result.data?.let { data ->
                 addCard(data)
