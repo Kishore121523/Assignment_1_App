@@ -6,12 +6,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
+import android.widget.ArrayAdapter
+import android.widget.*
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.assignment1_app.data.User
+import android.widget.AdapterView
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,9 +34,45 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         containerView = findViewById(R.id.containerView)
+        val btnAddUser = findViewById<Button>(R.id.btnAddUser)
 
-        findViewById<Button>(R.id.btnAddUser).setOnClickListener { onAddUserClick(it) }
-    }
+        btnAddUser.setOnClickListener { onAddUserClick(it) }
+
+        val spinnerBtn: Spinner = findViewById(R.id.spinnerCtrl)
+        val options = arrayOf("Enabled", "Disabled")
+
+        spinnerBtn.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, options)
+
+        spinnerBtn.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val selectedOption = options[position]
+                updateAddUserButton(selectedOption)
+
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                // dssd
+            }
+
+            private fun updateAddUserButton(selectedOption: String) {
+                when (selectedOption) {
+                    "Disabled" -> {
+                        btnAddUser.isEnabled = false
+                        btnAddUser.setTextColor(getColor(R.color.bgColor)) // Set text color to white
+                    }
+                    "Enabled" -> {
+                        btnAddUser.isEnabled = true
+                        btnAddUser.setTextColor(getColor(R.color.accentColor)) // Set text color to accent color
+                    }
+                }
+            }
+        }
+        }
 
     private fun onAddUserClick(view: View) {
         val intent = Intent(this, SecondActivity::class.java)

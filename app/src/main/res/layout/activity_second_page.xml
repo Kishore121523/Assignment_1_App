@@ -91,7 +91,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="68dp"
         android:onClick="onSubmitClick"
-        android:textColor="@color/bgColor"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
