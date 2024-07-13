@@ -1,5 +1,5 @@
 
-# Assignment 1 - "Add Users" App
+# Assignment 1 - "Add Users" App (Refer Output Screenshot PDF in the repository to see the functionality of the app)
 
 A simple android application developed using Kotlin to add user details and display it in a minimal and a consistent UI.
 
