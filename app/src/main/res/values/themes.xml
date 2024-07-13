@@ -1,5 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme -->
     <style name="Base.Theme.Assignment1_App" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:windowBackground">@color/bgColor</item>-->
         <item name="colorPrimary">@color/actionBarBg</item>
