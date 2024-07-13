@@ -7,13 +7,13 @@
     tools:context=".SecondActivity">
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/editName"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#f4ae95"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:backgroundTint="#f4ae95"
         android:textColor="@color/accentColor"
         android:textColorHint="@color/material_dynamic_neutral_variant60"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etAge"
+        android:id="@+id/editAge"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
@@ -34,11 +34,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
 
 
     <EditText
-        android:id="@+id/etSex"
+        android:id="@+id/editSex"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
@@ -50,10 +50,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAge" />
+        app:layout_constraintTop_toBottomOf="@+id/editAge" />
 
     <EditText
-        android:id="@+id/etPhone"
+        android:id="@+id/editPhone"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
@@ -65,11 +65,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSex" />
+        app:layout_constraintTop_toBottomOf="@+id/editSex" />
 
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/editEmail"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
@@ -81,20 +81,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/editPhone" />
 
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="68dp"
-        android:onClick="onSubmitClick"
+        android:layout_marginTop="50dp"
         android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

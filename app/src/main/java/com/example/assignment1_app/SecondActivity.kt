@@ -21,11 +21,11 @@ class SecondActivity : AppCompatActivity() {
 
     // This function gets the data from each of the EditText and pass it to the MainActivity.kt
     private fun getDataFromUser() {
-        val name = findViewById<EditText>(R.id.etName).text.toString()
-        val age = findViewById<EditText>(R.id.etAge).text.toString()
-        val sex = findViewById<EditText>(R.id.etSex).text.toString()
-        val phone = findViewById<EditText>(R.id.etPhone).text.toString()
-        val email = findViewById<EditText>(R.id.etEmail).text.toString()
+        val name = findViewById<EditText>(R.id.editName).text.toString()
+        val age = findViewById<EditText>(R.id.editAge).text.toString()
+        val sex = findViewById<EditText>(R.id.editSex).text.toString()
+        val phone = findViewById<EditText>(R.id.editPhone).text.toString()
+        val email = findViewById<EditText>(R.id.editEmail).text.toString()
 
         val resultIntent = Intent().apply {
             putExtra("Passed_Name", name)

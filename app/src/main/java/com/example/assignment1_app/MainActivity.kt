@@ -85,11 +85,11 @@ class MainActivity : AppCompatActivity() {
         val phone = data.getStringExtra("Passed_Phone")
         val email = data.getStringExtra("Passed_Email")
 
-        cardView.findViewById<TextView>(R.id.tvName).text = "Name: ${name}"
-        cardView.findViewById<TextView>(R.id.tvAge).text = "Age: ${age}"
-        cardView.findViewById<TextView>(R.id.tvSex).text = "Sex: ${sex}"
-        cardView.findViewById<TextView>(R.id.tvPhone).text = "Phone: ${phone}"
-        cardView.findViewById<TextView>(R.id.tvEmail).text = "Email: ${email}"
+        cardView.findViewById<TextView>(R.id.textName).text = "Name: ${name}"
+        cardView.findViewById<TextView>(R.id.textAge).text = "Age: ${age}"
+        cardView.findViewById<TextView>(R.id.textSex).text = "Sex: ${sex}"
+        cardView.findViewById<TextView>(R.id.textPhone).text = "Phone: ${phone}"
+        cardView.findViewById<TextView>(R.id.textEmail).text = "Email: ${email}"
 
         // The linear layout is selected and the cardView(which is a separate xml file) is added each time
         containerView.addView(cardView)
